@@ -1,8 +1,20 @@
 const WorkItem = class {
+    #description;
+    #dueDate;
+    #priority;
     constructor(description, dueDate, priority) {
-        this.description = description;
-        this.dueDate = dueDate;
-        this.priority = priority;
+        this.#description = description;
+        this.#dueDate = dueDate;
+        this.#priority = priority;
+    }
+    get description() {
+        return this.#description;
+    }
+    get dueDate() {
+        return this.#dueDate;
+    }
+    get priority() {
+        return this.#priority;
     }
 }
 
